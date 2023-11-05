@@ -127,7 +127,7 @@ public class Main {
             FileOutputStream fileOut = new FileOutputStream(filename);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(shape);
-            System.out.println("Serialized " + shape.getClass().getSimpleName() + " to " + filename);
+            System.out.println(shape.getClass().getSimpleName() + " has been serialized to " + filename);
         } catch (IOException e) {
             e.printStackTrace();
         }
