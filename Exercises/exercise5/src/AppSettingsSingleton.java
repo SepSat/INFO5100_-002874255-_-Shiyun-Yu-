@@ -8,7 +8,7 @@ public class AppSettingsSingleton {
     // Configuration settings can be stored in a HashMap
     private Map<String, String> settings;
 
-    // Constructor is private to prevent instantiation from outside
+    // Private constructor to prevent instantiation from outside
     private AppSettingsSingleton() {
         settings = new HashMap<>();
         // Load settings from a file, database, or hardcoded values

@@ -1,12 +1,10 @@
-import java.util.HashMap;
-import java.util.Map;
-
-// Main class to demonstrate Singleton
 public class Main {
     public static void main(String[] args) {
-        // Singleton example:
+        // Demonstrate Singleton design pattern.
         singleton();
+        // Demonstrate Observer design pattern.
         observer();
+        // Demonstrate Factory design pattern.
         factory();
     }
 
