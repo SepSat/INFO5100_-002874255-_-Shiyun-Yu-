@@ -1,0 +1,22 @@
+{
+  "BookShelf": [
+    {
+      "title": "Java Fundamentals",
+      "publishedYear": 2020,
+      "numberOfPages": 350,
+      "authors": ["John Doe", "Jane Smith"]
+    },
+    {
+      "title": "Advanced Python",
+      "publishedYear": 2019,
+      "numberOfPages": 280,
+      "authors": ["Emily Johnson"]
+    },
+    {
+      "title": "Web Development Essentials",
+      "publishedYear": 2021,
+      "numberOfPages": 400,
+      "authors": ["Michael Brown", "Laura Davis"]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<BookShelf>
+    <Book>
+        <title>Java Fundamentals</title>
+        <publishedYear>2020</publishedYear>
+        <numberOfPages>350</numberOfPages>
+        <authors>
+            <author>John Doe</author>
+            <author>Jane Smith</author>
+        </authors>
+    </Book>
+    <Book>
+        <title>Advanced Python</title>
+        <publishedYear>2019</publishedYear>
+        <numberOfPages>280</numberOfPages>
+        <authors>
+            <author>Emily Johnson</author>
+        </authors>
+    </Book>
+    <Book>
+        <title>Web Development Essentials</title>
+        <publishedYear>2021</publishedYear>
+        <numberOfPages>400</numberOfPages>
+        <authors>
+            <author>Michael Brown</author>
+            <author>Laura Davis</author>
+        </authors>
+    </Book>
+</BookShelf>
