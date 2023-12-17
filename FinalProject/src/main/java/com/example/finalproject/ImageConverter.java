@@ -1,9 +1,6 @@
 package com.example.finalproject;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public interface ImageConverter {
     BufferedImage convertFormat(String imagePath, String outputFormat) throws ImageConverterException;
