@@ -22,3 +22,7 @@ To run this application, you need to have Java and JavaFX installed on your syst
 ## Class Diagram
 Below is the class diagram representing the main components of the application:
 ![ClassDiagram.png](ClassDiagram.png)
+
+## Screenshot
+Below is the screenshots of how to use the app to convert images to desired format.
+[screenshot.pdf](screenshot.pdf)
