@@ -25,4 +25,4 @@ Below is the class diagram representing the main components of the application:
 
 ## Screenshots
 Below is the screenshots of how to use the app to convert images to desired format.
-[screenshot.pdf](screenshot.pdf)
+[sreenshots.pdf](sreenshots.pdf)
