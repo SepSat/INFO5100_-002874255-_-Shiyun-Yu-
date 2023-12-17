@@ -23,6 +23,3 @@ public class JPGConverter implements ImageConverter {
         }
     }
 }
-//    private String getOutputFilePath(String originalPath, String newFormat) {
-//        return originalPath.substring(0, originalPath.lastIndexOf('.')) + "_converted." + newFormat;
-//    }

@@ -1,6 +1,5 @@
 package com.example.finalproject;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 import javafx.geometry.Insets;
@@ -33,7 +32,6 @@ public class HomeController extends VBox {
     private String targetFormat; // Add this line
     private FileChooser fileChooser;
     private ComboBox<String> formatComboBox;
-    private ObservableList<String> availableFormats;
     private Label feedbackLabel;
 
     public HomeController() {
@@ -47,10 +45,10 @@ public class HomeController extends VBox {
         imageDataList = new ArrayList<>();
         uploadButton = new Button("Upload Image");
         convertButton = new Button("Convert Format");
-        saveButton = new Button("Save Converted Image");
+        saveButton = new Button("Save last Converted Image");
         fileChooser = new FileChooser();
         fileChooserSetup();
-        availableFormats = FXCollections.observableArrayList("PNG", "JPG");
+        ObservableList<String> availableFormats = FXCollections.observableArrayList("PNG", "JPG");
         formatComboBox = new ComboBox<>(availableFormats);
         formatComboBox.setPromptText("Select Format");
         feedbackLabel = new Label();
@@ -132,15 +130,6 @@ public class HomeController extends VBox {
         }
     }
 
-    private String getFileExtension(File file) {
-        String fileName = file.getName();
-        if (fileName.lastIndexOf(".") != -1 && fileName.lastIndexOf(".") != 0) {
-            return fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
-        } else {
-            return ""; // Default or error handling
-        }
-    }
-
     private void handleUploadAction() {
         List<File> selectedFiles = fileChooser.showOpenMultipleDialog(this.getScene().getWindow());
         if (selectedFiles != null) {
@@ -170,7 +159,4 @@ public class HomeController extends VBox {
         return null;
     }
 
-    private String getOutputFilePath(String originalPath, String newFormat) {
-        return originalPath.substring(0, originalPath.lastIndexOf('.')) + "_converted." + newFormat;
-    }
 }

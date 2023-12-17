@@ -3,9 +3,9 @@ package com.example.finalproject;
 import java.io.File;
 
 public class ImageData {
-    private String filePath;
-    private String displayName;
-    private long fileSize;
+    private final String filePath;
+    private final String displayName;
+    private final long fileSize;
 
     public ImageData(String filePath) {
         this.filePath = filePath;
