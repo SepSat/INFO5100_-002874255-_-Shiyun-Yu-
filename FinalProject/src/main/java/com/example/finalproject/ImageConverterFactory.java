@@ -1,5 +1,6 @@
 package com.example.finalproject;
 
+// Factory design pattern
 public class ImageConverterFactory {
     public static ImageConverter getConverter(String outputFormat) throws ImageConverter.ImageConverterException {
         return switch (outputFormat.toLowerCase()) {

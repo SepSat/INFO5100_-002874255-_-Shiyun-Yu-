@@ -1,5 +1,9 @@
 # JavaFX Image Management Tool
 
+## Author
+Shiyun Yu
+002874255
+
 ## Description
 This JavaFX application is an image management tool that allows users to upload images, apply basic filters, convert them to different formats, and save the converted images to a desired location.
 
@@ -17,4 +21,4 @@ To run this application, you need to have Java and JavaFX installed on your syst
 
 ## Class Diagram
 Below is the class diagram representing the main components of the application:
-
+![ClassDiagram.png](ClassDiagram.png)

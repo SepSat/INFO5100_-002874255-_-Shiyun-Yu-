@@ -25,13 +25,13 @@ public class HomeController extends VBox {
     // Encapsulation demonstration.
     private ListView<HBox> imageListView;
     private List<ImageData> imageDataList; // List to hold image data
-    private Button uploadButton;
-    private Button convertButton;
-    private Button saveButton;
+    private Button uploadButton; // Button to upload a image
+    private Button convertButton; // Button to convert a image
+    private Button saveButton; // Button to save/download a image
     private BufferedImage convertedImage; // To hold the converted image in memory
     private String targetFormat; // Add this line
     private FileChooser fileChooser;
-    private ComboBox<String> formatComboBox;
+    private ComboBox<String> formatComboBox; // Dropdown menu to select filetype to convert to
     private Label feedbackLabel;
 
     public HomeController() {
@@ -64,11 +64,13 @@ public class HomeController extends VBox {
     }
 
     private void setupLayout() {
+        // Setup 4 GUI buttons for different purposes
         HBox buttonBar = new HBox(10, uploadButton, convertButton, formatComboBox, saveButton);
         buttonBar.setPadding(new Insets(10));
         this.getChildren().addAll(buttonBar, imageListView, feedbackLabel);
     }
 
+    // Setup button and action handler matching.
     private void setupActions() {
         uploadButton.setOnAction(event -> handleUploadAction());
         convertButton.setOnAction(event -> handleConvertAction());
@@ -129,8 +131,8 @@ public class HomeController extends VBox {
             }
         }
     }
-
     private void handleUploadAction() {
+        // Setup filechooser to select images from desktop/laptop
         List<File> selectedFiles = fileChooser.showOpenMultipleDialog(this.getScene().getWindow());
         if (selectedFiles != null) {
             for (File file : selectedFiles) {
@@ -138,17 +140,24 @@ public class HomeController extends VBox {
             }
         }
     }
-
+    // Show image information in the home page.
     private void displayImage(File file) {
         ImageData imageData = new ImageData(file.getAbsolutePath());
         imageDataList.add(imageData);
+
         Image image = new Image(file.toURI().toString(), 100, 100, true, true);
         ImageView imageView = new ImageView(image);
-        Label imageInfo = new Label("Name: " + file.getName() + "\nSize: " + file.length() + " bytes");
+        Label imageInfo = new Label("Name: " + file.getName() +
+                "\nSize: " + file.length() +
+                " bytes\nWidth: " + imageData.getWidth() +
+                " px\nHeight: " + imageData.getHeight() +
+                " px\nCamera: " + imageData.getCameraModel() +
+                "\nGPS Info: " + imageData.getGpsInfo());
         HBox hbox = new HBox(10, imageView, imageInfo);
         hbox.setPadding(new Insets(5));
         imageListView.getItems().add(hbox);
     }
+
     private String getSelectedImagePath() {
         HBox selectedHBox = imageListView.getSelectionModel().getSelectedItem();
         if (selectedHBox != null) {
